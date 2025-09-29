@@ -269,13 +269,14 @@
 }
 .submit {
   display: inline-flex;
-  align-items: center;
   gap: 0.6rem;
   border-radius: 999px;
   border: var(--ring);
   background: #0d1117;
   padding: 0.8rem 1rem;
   cursor: pointer;
+  color: white;
+  align-items: center;
 }
 .submit:hover {
   box-shadow: 0 10px 30px #00000090, 0 0 30px #00ffcc26;
