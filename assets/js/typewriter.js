@@ -2,9 +2,11 @@
 // TYPEWRITER
 const typeTarget = document.getElementById('typewriter');
 const phrases = [
-  'Computer Science Student | Frontend Developer | Animator',
-  "I build fast, animated, accessible web experiences",
-  "Let's craft something futuristic together"
+  'Full Stack Developer',
+  'Artificial Intelligence Enthusiast',
+  'Computer Science Student',
+  "I don't know yet",
+  "To be completed"
 ];
 let pi = 0, ci = 0, typing = true;
 
