@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Futuristic Portfolio — Dark Neon</title>
+    <meta
+      name="description"
+      content="Personal portfolio — dark, futuristic, animated."
+    />
+    <!-- Base theme + variables -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <!-- Components (cards, buttons, nav, grids) -->
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <!-- Page-level sections -->
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header>
+      <nav class="nav container">
+        <a href="#" class="brand">
+          <span class="logo" aria-hidden="true"></span>
+          <strong>yourname.dev</strong>
+        </a>
+        <div class="nav-links">
+          <a href="#about" class="pill">About</a>
+          <a href="#projects" class="pill">Projects</a>
+          <a href="#skills" class="pill">Skills</a>
+          <a href="#contact" class="pill">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home" data-parallax="0.1">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+
+      <div class="hero-inner container reveal">
+        <span class="pill badge">Computer Science • Frontend • Animation</span>
+
+        <h1 class="title">
+          Hi, I’m <span class="neon">Your Name</span> —
+          <span
+            class="type"
+            id="typewriter"
+            aria-label="typing headline"
+          ></span>
+        </h1>
+
+        <p class="muted lead">
+          I build fast, aesthetic web experiences with delightful motion, crisp
+          code, and a futuristic touch.
+        </p>
+
+        <div class="cta">
+          <a href="#projects" class="btn primary">View My Work</a>
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <h2 class="reveal">About Me</h2>
+      <div class="about">
+        <div class="pfp-wrap reveal">
+          <div class="pfp-glow" aria-hidden="true"></div>
+          <div class="hex">
+            <!-- Replace with your own photo asset -->
+            <img
+              src="assets/img/profile-placeholder.jpg"
+              alt="Portrait of developer"
+            />
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <article class="card reveal">
+            <h3>Who I Am</h3>
+            <p class="muted">
+              I’m a Computer Science student and frontend developer focusing on
+              interactive UI, micro‑interactions, and performance. I love
+              turning complex ideas into elegant, animated interfaces.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Focus</h3>
+            <p class="muted">
+              JavaScript / TypeScript, React, CSS architecture, Web Animations,
+              Canvas. Comfortable with Python + Flask for backends and tooling.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Timeline</h3>
+            <div class="timeline">
+              <div class="step">
+                <span class="dot"></span>
+                <strong>2025 — Present</strong>
+                <div class="muted">
+                  Frontend Intern @ NeonLabs • Built a micro-animations library
+                  and design system tokens.
+                </div>
+              </div>
+              <div class="step">
+                <span class="dot"></span>
+                <strong>2023 — 2025</strong>
+                <div class="muted">
+                  B.S. Computer Science • Projects in web graphics, data viz,
+                  and UI engineering.
+                </div>
+              </div>
+              <div class="step">
+                <span class="dot"></span>
+                <strong>Earlier</strong>
+                <div class="muted">
+                  Freelance websites, course projects, and hackathon builds.
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <h2 class="reveal">Projects</h2>
+
+      <div class="filters reveal" role="toolbar" aria-label="Project filters">
+        <button class="pill" data-filter="all" aria-pressed="true">All</button>
+        <button class="pill" data-filter="web">Web Dev</button>
+        <button class="pill" data-filter="anim">Animations</button>
+        <button class="pill" data-filter="other">Other</button>
+      </div>
+
+      <div class="projects">
+        <!-- Card 1 -->
+        <article class="proj reveal" data-cat="web">
+          <div class="media">
+            <img
+              src="assets/img/project-1.jpg"
+              alt="Dashboard project preview"
+            />
+            <div class="tagbar">
+              <span class="pill">React</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">Vite</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Analytics Dashboard</h3>
+            <p class="muted">
+              Fast charts, responsive grid, and smooth page transitions with
+              route‑level animations.
+            </p>
+            <div class="stack">
+              <span class="pill">JS</span>
+              <span class="pill">CSS</span>
+              <span class="pill">API</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="proj reveal" data-cat="anim">
+          <div class="media">
+            <img
+              src="assets/img/project-2.jpg"
+              alt="Animations library preview"
+            />
+            <div class="tagbar">
+              <span class="pill">Canvas</span>
+              <span class="pill">WAAPI</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Motion Kit</h3>
+            <p class="muted">
+              Micro‑interactions and physics‑based transitions, including
+              parallax and magnetic buttons.
+            </p>
+            <div class="stack">
+              <span class="pill">JS</span>
+              <span class="pill">CSS</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="proj reveal" data-cat="other">
+          <div class="media">
+            <img src="assets/img/project-3.jpg" alt="Flask project preview" />
+            <div class="tagbar">
+              <span class="pill">Flask</span>
+              <span class="pill">Python</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Flask API + UI</h3>
+            <p class="muted">
+              Lightweight backend powering a reactive front‑end with streaming
+              updates.
+            </p>
+            <div class="stack">
+              <span class="pill">Python</span>
+              <span class="pill">JS</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="proj reveal" data-cat="web">
+          <div class="media">
+            <img
+              src="assets/img/project-4.jpg"
+              alt="Component library preview"
+            />
+            <div class="tagbar">
+              <span class="pill">Design System</span>
+              <span class="pill">CSS</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>UI Components</h3>
+            <p class="muted">
+              Accessible, themeable components with tokens and dark‑mode
+              contrast checks.
+            </p>
+            <div class="stack">
+              <span class="pill">A11y</span>
+              <span class="pill">Tokens</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="proj reveal" data-cat="anim">
+          <div class="media">
+            <img
+              src="assets/img/project-5.jpg"
+              alt="3D/parallax project preview"
+            />
+            <div class="tagbar">
+              <span class="pill">Parallax</span>
+              <span class="pill">Three‑ish</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Depth Scenes</h3>
+            <p class="muted">
+              Layered imagery with perspective scroll and cursor‑reactive
+              lighting.
+            </p>
+            <div class="stack">
+              <span class="pill">JS</span>
+              <span class="pill">Canvas</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="proj reveal" data-cat="other">
+          <div class="media">
+            <img src="assets/img/project-6.jpg" alt="CLI tool preview" />
+            <div class="tagbar">
+              <span class="pill">Node</span>
+              <span class="pill">CLI</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Dev CLI</h3>
+            <p class="muted">
+              Automates scaffolding and linting — ships with opinionated
+              templates.
+            </p>
+            <div class="stack">
+              <span class="pill">Node</span>
+              <span class="pill">DX</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="#">GitHub</a>
+              <a class="link-btn" href="#">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <h2 class="reveal">Skills</h2>
+      <div class="skills-wrap">
+        <div class="ring reveal" data-percent="90">
+          <div class="meter"><span class="pct">90%</span></div>
+          <div>
+            <strong>Python</strong>
+            <div class="muted">Scripting • Flask • Data</div>
+          </div>
+        </div>
+        <div class="ring reveal" data-percent="85">
+          <div class="meter"><span class="pct">85%</span></div>
+          <div>
+            <strong>React</strong>
+            <div class="muted">SPA • Hooks • Patterns</div>
+          </div>
+        </div>
+        <div class="ring reveal" data-percent="88">
+          <div class="meter"><span class="pct">88%</span></div>
+          <div>
+            <strong>CSS</strong>
+            <div class="muted">Layout • Motion • Systems</div>
+          </div>
+        </div>
+        <div class="ring reveal" data-percent="75">
+          <div class="meter"><span class="pct">75%</span></div>
+          <div>
+            <strong>Canvas/WAAPI</strong>
+            <div class="muted">Particles • Parallax • Interactions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <h2 class="reveal">Contact</h2>
+      <div class="contact-card reveal">
+        <form
+          class="form"
+          onsubmit="event.preventDefault(); alert('Thanks! This demo does not actually send email.');"
+        >
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="msg">Message</label>
+            <textarea
+              id="msg"
+              name="msg"
+              rows="5"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+          </div>
+          <button class="submit" type="submit">Send Message</button>
+        </form>
+        <div class="socials">
+          <a class="pill" href="#" aria-label="GitHub">GitHub</a>
+          <a class="pill" href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a class="pill" href="mailto:you@example.com" aria-label="Email"
+            >Email</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container foot">
+        <small class="muted">© <span id="year"></span> Your Name</small>
+        <a class="to-top" href="#home" aria-label="Scroll to top">↑</a>
+      </div>
+    </footer>
+
+    <!-- JS: Boot order matters (core first, then features) -->
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/rings.js"></script>
+    <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
