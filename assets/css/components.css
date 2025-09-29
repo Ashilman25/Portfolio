@@ -206,7 +206,8 @@
     grid-template-columns: 1fr;
   }
 }
-.ring {
+
+.skill {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -214,28 +215,16 @@
   border: var(--ring);
   border-radius: var(--radius-xl);
   padding: 1rem;
+  box-shadow: var(--shadow-neon);
 }
-.ring .meter {
-  width: 84px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  position: relative;
-  background: conic-gradient(var(--teal) 0deg, #1a222c 0deg);
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
-.ring .meter:after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 50%;
-  background: #0b0e13;
-  border: 1px solid #ffffff10;
-}
-.ring .pct {
-  position: relative;
-  font-weight: 700;
-}
+
+
 
 .contact-card {
   max-width: 720px;
