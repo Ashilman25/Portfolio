@@ -1,1 +1,45 @@
 /* Just override shit I wanna do later */
+
+/* === Skills carousel polish (non-destructive overrides) === */
+
+/* a touch of vertical breathing room so card glows don't touch the edges */
+.skills-carousel {
+  padding-block: 0.25rem;
+}
+
+/* slightly larger gaps so glows don't overlap */
+.skills-track {
+  gap: 1.25rem; /* was 1rem */
+}
+
+/* uniform card sizing + thinner, tighter shadows only for carousel items */
+.skills-track .skill {
+  position: relative;          /* for ::after halo */
+  isolation: isolate;          /* keep effects self-contained */
+  width: 240px;                /* uniform width for neat rhythm */
+  min-height: 84px;            /* consistent height */
+  padding: 0.9rem;             /* balanced padding */
+
+  /* replace heavy neon with a crisp ring + compact drop shadow */
+  box-shadow:
+    0 0 0 1px #ffffff1a,       /* subtle ring */
+    0 8px 14px rgba(0,0,0,0.45);/* tight, non-bleeding depth */
+}
+
+/* very soft, contained neon aura that won't bleed into neighbors */
+.skills-track .skill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  pointer-events: none;
+  box-shadow: 0 0 22px rgba(0,255,204,0.08);
+}
+
+/* uniform icon sizing so every card aligns cleanly */
+.skills-track .skill .skill-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+}

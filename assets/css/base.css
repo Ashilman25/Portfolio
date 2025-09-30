@@ -120,8 +120,6 @@ header {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: var(--grad-1);
-  box-shadow: var(--shadow-neon);
 }
 .brand strong {
   letter-spacing: 0.6px;

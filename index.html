@@ -23,9 +23,23 @@
     <header>
       <nav class="nav container">
         <a href="#" class="brand">
-          <span class="logo" aria-hidden="true"></span>
+          <span class="logo" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 256 256" 
+                width="28" height="28">
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+                    font-family="'Arial Black', Impact, sans-serif"
+                    font-size="160" font-weight="900"
+                    fill="black" stroke="white" stroke-width="14"
+                    stroke-linejoin="round" paint-order="stroke">
+                AS
+              </text>
+            </svg>
+          </span>
           <strong>AndrewShilman.dev</strong>
         </a>
+
+
         <div class="nav-links">
           <a href="#about" class="pill">About</a>
           <a href="#projects" class="pill">Projects</a>
@@ -162,8 +176,8 @@
               <span class="pill">API</span>
             </div>
             <div class="card-actions">
-              <a class="link-btn" href="#">GitHub</a>
-              <a class="link-btn" href="#">Live Demo</a>
+              <a class="link-btn" href="https://github.com/Ashilman25/ResumeAnalyzer">GitHub</a>
+              <a class="link-btn" href="https://pdfresumeanalyzer.ai/">Live Demo</a>
             </div>
           </div>
         </article>
@@ -177,13 +191,13 @@
             />
             <div class="tagbar">
               <span class="pill">Canvas</span>
-              <span class="pill">WAAPI</span>
+              <span class="pill">HTML</span>
             </div>
           </div>
           <div class="body">
             <h3>Shortest Paths Algorithms</h3>
             <p class="muted">
-              Micro‑interactions and physics‑based transitions, including
+              Micro-interactions and physics-based transitions, including
               parallax and magnetic buttons.
             </p>
             <div class="stack">
@@ -191,8 +205,8 @@
               <span class="pill">CSS</span>
             </div>
             <div class="card-actions">
-              <a class="link-btn" href="#">GitHub</a>
-              <a class="link-btn" href="#">Live Demo</a>
+              <a class="link-btn" href="https://github.com/Ashilman25/ShortestLineAlgs">GitHub</a>
+              <a class="link-btn" href="https://shortestpathalgs.com/">Live Demo</a>
             </div>
           </div>
         </article>
@@ -232,41 +246,87 @@
     <!-- SKILLS -->
     <section class="section container" id="skills">
       <h2 class="reveal">Skills</h2>
-      <div class="skills-wrap">
-        <div class="skill reveal">
-          <img src="assets/img/icons/python.svg" alt="Python logo" class="skill-icon" />
-          <div>
-            <strong>Python</strong>
-            <div class="muted">Scripting • Flask • Data</div>
+      <div class="skills-carousel">
+        <div class="skills-track">
+          <div class="skill">
+            <img src="assets/img/icons/python.svg" alt="Python logo" class="skill-icon" />
+            <div>
+              <strong>Python</strong>
+              <div class="muted">Scripting • Flask • Data</div>
+            </div>
           </div>
-        </div>
 
-        <div class="skill reveal">
-          <img src="assets/img/icons/react.svg" alt="React logo" class="skill-icon" />
-          <div>
-            <strong>React</strong>
-            <div class="muted">SPA • Hooks • Patterns</div>
+          <div class="skill">
+            <img src="assets/img/icons/react.svg" alt="React logo" class="skill-icon" />
+            <div>
+              <strong>React</strong>
+              <div class="muted">SPA • Hooks • Patterns</div>
+            </div>
           </div>
-        </div>
 
-        <div class="skill reveal">
-          <img src="assets/img/icons/css.svg" alt="CSS3 logo" class="skill-icon" />
-          <div>
-            <strong>CSS</strong>
-            <div class="muted">Layout • Motion • Systems</div>
+          <div class="skill">
+            <img src="assets/img/icons/css.svg" alt="CSS3 logo" class="skill-icon" />
+            <div>
+              <strong>CSS</strong>
+              <div class="muted">Layout • Motion • Systems</div>
+            </div>
           </div>
-        </div>
 
-        <div class="skill reveal">
-          <img src="assets/img/icons/canvas.svg" alt="Canvas logo" class="skill-icon" />
-          <div>
-            <strong>Canvas/HTML</strong>
-            <div class="muted">Particles • Parallax • Interactions</div>
+          <div class="skill">
+            <img src="assets/img/icons/canvas.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>Canvas/HTML</strong>
+              <div class="muted">Particles • Parallax • Interactions</div>
+            </div>
           </div>
-        </div>
 
+          <div class="skill">
+            <img src="assets/img/icons/java.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>Java</strong>
+              <div class="muted">OOP • Spring • Multithreading</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <img src="assets/img/icons/javascript.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>JavaScript</strong>
+              <div class="muted">DOM • Asynch • Frontend</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <img src="assets/img/icons/c.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>C++</strong>
+              <div class="muted">Mem Management • OOD • STL</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <img src="assets/img/icons/sql.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>SQL</strong>
+              <div class="muted">DB Design • Query • Data Analysis</div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <img src="assets/img/icons/git.svg" alt="Canvas logo" class="skill-icon" />
+            <div>
+              <strong>Git</strong>
+              <div class="muted">Branches • Commit Management • VC</div>
+            </div>
+          </div>
+
+
+
+        </div>
       </div>
     </section>
+
+
 
 
     <!-- CONTACT -->
@@ -325,6 +385,7 @@
     <script src="assets/js/filters.js"></script>
     <script src="assets/js/rings.js"></script>
     <script src="assets/js/parallax.js"></script>
+    <script src="assets/js/carousel.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

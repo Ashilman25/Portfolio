@@ -224,6 +224,37 @@
   object-fit: contain;
 }
 
+/* Carousel wrapper – hides overflow */
+.skills-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Track that moves left continuously */
+.skills-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll-left 8s linear infinite;
+}
+
+/* Skill card adjustments (re-use your existing .skill styling) */
+.skills-track .skill {
+  flex: 0 0 auto;
+  min-width: 200px; /* fixed width for smooth looping */
+}
+
+/* Keyframes for horizontal scroll */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 
 .contact-card {
