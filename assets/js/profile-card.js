@@ -76,6 +76,15 @@
     const miniImg = wrap.querySelector('.pc-mini-avatar img');
     const btn = wrap.querySelector('.pc-contact-btn');
 
+    if (btn) {
+        btn.style.pointerEvents = 'auto';   // belt & suspenders
+        btn.style.cursor = 'pointer';
+        btn.addEventListener('click', () => {
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     // Images
     avatarImg.src = avatarUrl;
     avatarImg.onerror = e => { e.currentTarget.style.display = 'none'; };
@@ -86,8 +95,10 @@
 
     // Clicking "Contact"
     if (btn) btn.addEventListener('click', () => {
-      // Customize this behavior if you want something else:
-      window.location.hash = '#contact';
+        const contactSection = document.querySelector('#contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 
     // Tilt logic (vanilla)

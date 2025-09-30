@@ -581,15 +581,7 @@
   }
 }
 
-
-
-
-
-/* TEST TEST TEST */
-/* Make the avatar image cover the entire card area */
 /* Soft top gradient behind the name/title */
-
-
 #profile-card-mount .pc-avatar-content::after {
   content: "";
   position: absolute;
@@ -603,4 +595,16 @@
     rgba(0,0,0,0.35) 35%,
     rgba(0,0,0,0.0) 60%
   );
+}
+
+
+/* Fix the override contact me button not pressing issue */
+.pc-user-info, .pc-contact.btn {
+    pointer-events: auto;
+}
+
+.pc-contact-btn {
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
 }
