@@ -1,7 +1,27 @@
+
 /* Just override shit I wanna do later */
 
-/* === Skills carousel polish (non-destructive overrides) === */
-
+:root {
+  --bg-0: #000000;
+  --bg-1: #0d0d0d;
+  --glass: #0f0f12cc;
+  --txt-0: #eaeff6;
+  --txt-dim: #a6adbb;
+  --teal: #00ffcc;
+  --blue: #4f9dff;
+  --pink: #ff4fd8;
+  --green: #39ff14;
+  --grad-1: linear-gradient(135deg, var(--teal), var(--pink));
+  --grad-2: linear-gradient(135deg, var(--blue), var(--pink));
+  --grad-3: linear-gradient(135deg, var(--teal), var(--blue));
+  --card-blur: 14px;
+  --radius-2xl: 1.25rem;
+  --radius-xl: 0.9rem;
+  --ring: 1px solid #ffffff1f;
+  --shadow-neon: 0 0 30px #00ffcc22, 0 0 60px #ff4fd81a;
+  --container: 1200px;
+  --speed-quick: 220ms;
+}
 /* a touch of vertical breathing room so card glows don't touch the edges */
 .skills-carousel {
   padding-block: 0.25rem;
@@ -42,4 +62,38 @@
   height: 40px;
   flex: 0 0 40px;
   object-fit: contain;
+}
+
+h3 > span {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 1.25em;
+  padding-left: 10px;
+}
+
+h3 > span > span {
+  display: block;
+  animation: anim 20s infinite ease;
+
+  /* Gradient text */
+  background: var(--grad-3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes anim {
+  0%   { transform: translateY(0%); }
+  10%  { transform: translateY(-100%); }
+  20%  { transform: translateY(-200%); }
+  30%  { transform: translateY(-300%); }
+  40%  { transform: translateY(-400%); }
+  50%  { transform: translateY(-500%); }
+  60%  { transform: translateY(-600%); }
+  70%  { transform: translateY(-700%); }
+  80%  { transform: translateY(-800%); }
+  90%  { transform: translateY(-900%); }
+  100% { transform: translateY(0%); } /* Keep adjusting as more skills are added, keep diving total skills evenly */
 }
