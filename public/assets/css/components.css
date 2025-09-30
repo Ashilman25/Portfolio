@@ -196,6 +196,14 @@
   box-shadow: 0 0 0 2px #ffffff15, 0 0 18px #00ffcc33;
 }
 
+/* Small icon sizing for link buttons (e.g. open.svg) */
+.link-btn img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
 .skills-wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
