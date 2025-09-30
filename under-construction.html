@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Under Construction</title>
+
+  <!-- Reuse your base look + a tiny page-specific CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/under-construction.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <main class="uc-wrap container">
+    <div class="uc-card reveal">
+      <div class="uc-icon" aria-hidden="true">
+        <!-- gears -->
+        <svg viewBox="0 0 128 128" width="80" height="80" class="gear gear-a">
+          <path d="M79 12l7 9 10-3 6 10-8 7 2 10 10 2 1 12-10 3-2 10 8 7-6 10-10-3-7 9-11-5-7 8-11-5-7 8-10-6 3-10-9-7 5-11-8-7 6-10 10 3 7-9 11 5 7-8 11 5 7-8z" fill="none" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <svg viewBox="0 0 128 128" width="56" height="56" class="gear gear-b">
+          <path d="M79 12l7 9 10-3 6 10-8 7 2 10 10 2 1 12-10 3-2 10 8 7-6 10-10-3-7 9-11-5-7 8-11-5-7 8-10-6 3-10-9-7 5-11-8-7 6-10 10 3 7-9 11 5 7-8 11 5 7-8z" fill="none" stroke="currentColor" stroke-width="4"/>
+        </svg>
+      </div>
+
+      <h1 class="uc-title">
+        <span class="muted">Page:</span> <strong id="uc-what">This feature</strong>
+      </h1>
+
+      <p class="muted uc-lead">
+        is currently under construction. I’m polishing the last bits—check back soon! 🚧
+      </p>
+
+      <!-- animated tape -->
+      <div class="tape"></div>
+
+      <!-- progress bar -->
+      <div class="uc-progress">
+        <div class="bar"><span class="fill" style="width: 62%"></span></div>
+        <small class="muted">Progress ~62%</small>
+      </div>
+
+      <div class="uc-actions">
+        <a class="btn" id="uc-back">← Back</a>
+        <a class="btn primary" href="index.html#contact">Notify Me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- reuse your particles + reveal for consistency -->
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script>
+    // Personalize the line using ?from=Project+Name (or hash #from=)
+    (function(){
+      const params = new URLSearchParams(location.search || location.hash.replace('#','?'));
+      const from = params.get('from') || 'This feature';
+      const back = params.get('back'); // optional custom back URL
+      document.getElementById('uc-what').textContent = from;
+
+      const backBtn = document.getElementById('uc-back');
+      backBtn.href = back || document.referrer || 'index.html';
+      backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (back) location.href = back;
+        else if (document.referrer) history.back();
+        else location.href = 'index.html';
+      });
+    })();
+  </script>
+</body>
+</html>
