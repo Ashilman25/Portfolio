@@ -1,0 +1,42 @@
+/* Enable perspective so skill cards can tilt in 3D */
+.skills-carousel {
+  perspective: 900px;
+}
+
+/* While interacting, allow enlarged/tilted card to overflow container
+   so edges don't get clipped by surrounding backgrounds. */
+.skills-carousel:hover {
+  overflow: visible;      /* default is hidden (in components.css); visible only during hover */
+  position: relative;     /* create a stacking context for safe z-indexing */
+  z-index: 5;             /* lift above nearby content if needed */
+}
+
+/* Make each skill card tilt smoothly without layout jank */
+.skills-track .skill {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 120ms ease, box-shadow 200ms ease;
+}
+
+/* Slight lift/glow and higher stacking when actively tilting */
+.skills-track .skill.is-tilting {
+  box-shadow: 0 16px 36px rgba(0,0,0,.55), 0 0 28px rgba(0,255,204,.18);
+  z-index: 50; /* rise above neighbors while tilting+scaling */
+}
+
+/* Keep the carousel paused when hovered (safety duplicate; also in components.css) */
+.skills-carousel:hover .skills-track {
+  animation-play-state: paused;
+}
+
+/* Optional: respect users who prefer reduced motion (tilt still works, but no marquee) */
+@media (prefers-reduced-motion: reduce) {
+  .skills-track { animation: none !important; }
+}
+
+
+
+
+
+
