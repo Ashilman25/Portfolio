@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ensureCoverage(loopWidth);
 
     // Pixels per second — tweak to taste
-    const PX_PER_SEC = 80;                          // constant speed
+    const PX_PER_SEC = 100;                          // constant speed
     const duration = loopWidth / PX_PER_SEC;        // seconds to move one set width
 
     track.style.setProperty("--loop", `${loopWidth}px`);
