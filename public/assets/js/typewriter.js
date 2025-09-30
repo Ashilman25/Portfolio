@@ -4,9 +4,7 @@ const typeTarget = document.getElementById('typewriter');
 const phrases = [
   'Full Stack Developer',
   'Artificial Intelligence Enthusiast',
-  'Computer Science Student',
-  "I don't know yet",
-  "To be completed"
+  'Computer Science Student'
 ];
 let pi = 0, ci = 0, typing = true;
 
