@@ -75,7 +75,7 @@ h3 > span {
 
 h3 > span > span {
   display: block;
-  animation: anim 20s infinite ease;
+  animation: anim 22s infinite ease;
 
   /* Gradient text */
   background: var(--grad-3);
