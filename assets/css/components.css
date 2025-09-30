@@ -46,6 +46,7 @@
   background: var(--grad-1);
   opacity: 0.3;
   z-index: -1;
+  
 }
 .about-cards {
   display: grid;
@@ -234,25 +235,67 @@
 /* Track that moves left continuously */
 .skills-track {
   display: flex;
-  gap: 1rem;
-  animation: scroll-left 8s linear infinite;
+  gap: 1.25rem;
+  will-change: transform;
+  animation: scroll var(--duration, 20s) linear infinite;
+  transform: translate3d(0, 0, 0);
 }
 
-/* Skill card adjustments (re-use your existing .skill styling) */
-.skills-track .skill {
-  flex: 0 0 auto;
-  min-width: 200px; /* fixed width for smooth looping */
-}
-
-/* Keyframes for horizontal scroll */
-@keyframes scroll-left {
+/* The animation to loop */
+@keyframes scroll {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
-  to {
-    transform: translateX(-50%);
-  }
+  to { 
+    transform: translate3d(calc(var(--loop, 0px) * -1), 0, 0); 
+  } 
+
 }
+
+/* The card and the glow */
+.skills-track .skill {
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 auto;
+  width: 240px;
+  min-height: 84px;
+  padding: 0.9rem;
+  background: #0b0e13cc;
+  border: var(--ring);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 0 0 1px #ffffff1a, 0 8px 14px rgba(0,0,0,0.45);
+}
+
+.skills-track .skill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  pointer-events: none;
+  box-shadow: 0 0 18px rgba(0,255,204,0.08);
+}
+
+
+
+/* icon size */
+.skills-track .skill .skill-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+}
+
+/* pause on hover  */
+.skills-carousel:hover .skills-track {
+  animation-play-state: paused;
+}
+
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .skills-track { animation: none; }
+}
+
 
 
 
