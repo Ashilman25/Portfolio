@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/pages.css" />
     <link rel="stylesheet" href="assets/css/skill-tilt.css" />
+    <link rel="stylesheet" href="assets/css/profile-card.css" />
 
   </head>
   <body>
@@ -80,15 +81,9 @@
     <section class="section container" id="about">
       <h2 class="reveal">About Me</h2>
       <div class="about">
+
         <div class="pfp-wrap reveal">
-          <div class="pfp-glow" aria-hidden="true"></div>
-          <div class="hex">
-            <!-- Replace with your own photo asset -->
-            <img
-              src="assets/img/headshot.png"
-              alt="Portrait of developer"
-            />
-          </div>
+          <div id="profile-card-mount"></div>
         </div>
 
         <div class="about-cards">
@@ -401,6 +396,26 @@
     <script src="assets/js/parallax.js"></script>
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/skill-tilt.js"></script>
+    <script src="assets/js/profile-card.js"></script>
+    <script>
+    mountProfileCard('#profile-card-mount', {
+      name: 'Andrew Shilman',
+      title: 'Software Engineer • MSU CS 26',
+      handle: 'Ashilman25',
+      status: 'Available',
+      contactText: 'Contact Me',
+      avatarUrl: 'assets/img/headshot.png',
+      miniAvatarUrl: 'assets/img/headshot.png',
+      showUserInfo: true,
+      enableTilt: true,
+      enableMobileTilt: true, // set true if you want phone tilt
+      // Optional: override gradients to match your theme:
+      innerGradient: 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)',
+      showBehindGradient: true
+    });
+
+    </script>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

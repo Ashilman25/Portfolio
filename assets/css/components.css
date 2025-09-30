@@ -301,8 +301,9 @@
 
 
 .contact-card {
-  max-width: 720px;
+  max-width: 650px;
   margin-inline: auto;
+  
   background: #0c0f14bf;
   border: var(--ring);
   border-radius: var(--radius-2xl);
@@ -349,4 +350,11 @@
   justify-content: center;
   gap: 0.8rem;
   margin-top: 0.9rem;
+}
+
+/* Make the Profile Card fill the same box as the old hex */
+#profile-card-mount .pc-card {
+  width: 100%;
+  max-width: 420px;    /* tweak to taste */
+  margin-inline: auto; /* center it */
 }
