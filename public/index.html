@@ -73,6 +73,7 @@
         <div class="cta">
           <a href="#projects" class="btn primary">View My Work</a>
           <a href="#contact" class="btn">Contact Me</a>
+          <a class="pill" href="assets/img/files/Andrew_Shilman.pdf" aria-label="Resume">Resume</a>
         </div>
       </div>
     </section>
@@ -175,6 +176,7 @@
       <div class="filters reveal" role="toolbar" aria-label="Project filters">
         <button class="pill" data-filter="all" aria-pressed="true">All</button>
         <button class="pill" data-filter="ai">AI</button>
+        <button class="pill" data-filter="databases">Databases</button>
         <button class="pill" data-filter="web">Web Dev</button>
         <button class="pill" data-filter="other">Other</button>
       </div>
@@ -182,6 +184,38 @@
       <div class="projects">
 
         <!-- Card 1-->
+        <article class="proj reveal" data-cat="databases">
+          <div class="media">
+            <img
+              src="assets/img/SchemaSense.png"
+              alt="Schema Sense preview"
+            />
+            <div class="tagbar">
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">FastAPI</span>
+            </div>
+          </div>
+          <div class="body">
+            <h3>Schema Sense</h3>
+            <p class="muted">
+              Database design and querying platform that enables visual schema modeling, NL-to-SQL generation,
+              and real-time PostgreSQL management
+            </p>
+            <div class="stack">
+              <span class="pill">Render</span>
+              <span class="pill">Neon</span>
+              <span class="pill">Vercel</span>
+            </div>
+            <div class="card-actions">
+              <a class="link-btn" href="https://github.com/Ashilman25/SchemaSense">GitHub</a>
+              <a class="link-btn" href="https://schema-sense.com">Live Demo
+                <img src="assets/img/icons/open.svg" alt="Open link"/>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2-->
         <article class="proj reveal" data-cat="ai">
           <div class="media">
             <img
@@ -203,7 +237,7 @@
             <div class="stack">
               <span class="pill">React</span>
               <span class="pill">Vite</span>
-              <span class="pill">React</span>
+              <span class="pill">Tailwind</span>
             </div>
             <div class="card-actions">
               <a class="link-btn" href="https://github.com/Ashilman25/MedAI">GitHub</a>
@@ -214,7 +248,7 @@
           </div>
         </article>
 
-        <!-- Card 2 -->
+        <!-- Card 3 -->
         <article class="proj reveal" data-cat="other">
           <div class="media">
             <img
@@ -247,7 +281,7 @@
           </div>
         </article>
 
-        <!-- Card 3 -->
+        <!-- Card 4 -->
         <article class="proj reveal" data-cat="ai">
           <div class="media">
             <img
@@ -280,7 +314,7 @@
           </div>
         </article>
 
-        <!-- Card 4 -->
+        <!-- Card 5 -->
         <article class="proj reveal" data-cat="web">
           <div class="media">
             <img
@@ -311,7 +345,7 @@
           </div>
         </article>
 
-        <!-- Card 5 -->
+        <!-- Card 6 -->
         <article class="proj reveal" data-cat="other">
           <div class="media">
             <img src="assets/img/icons/working.svg" alt="Under Construction"/>
